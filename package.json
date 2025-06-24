@@ -1,0 +1,70 @@
+{
+  "name": "ai-codegpt-tutor",
+  "displayName": "Andromeda-Tutor: Using OpenAI's GPT 4.1 series Tutor and Debugger annotator",
+  "description": "",
+  "publisher": "ThomasYIu0447",
+  "version": "1.0.0",
+  "engines": {
+    "vscode": "^1.101.0"
+  },
+  "categories": [
+    "AI",
+    "Debuggers"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+   "contributes": {
+    "commands": [
+      {
+        "command": "code-tutor.annotate",
+        "title": "Toggle Tutor Annotations",
+        "icon": "$(comment)"
+      }
+    ],
+    "configuration": {
+      "type": "object",
+      "title": "AI CodeGPT Tutor",
+      "properties": {
+        "codeTutor.openaiModel": {
+          "type": "string",
+          "default": "gpt-4.1",
+          "enum": [
+            "gpt-4.1",
+            "gpt-4.1-mini",
+            "gpt-4.1-nano"
+          ],
+          "description": "OpenAI model to use for code annotation (choose from: gpt-4.1, gpt-4.1-mini, gpt-4.1-nano)."
+        }
+      }
+    },
+    "menus": {
+      "editor/title": [
+        {
+          "command": "code-tutor.annotate",
+          "group": "navigation"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "pnpm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "pnpm run compile && pnpm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.10",
+    "@types/node": "20.x",
+    "@types/vscode": "^1.101.0",
+    "@typescript-eslint/eslint-plugin": "^8.31.1",
+    "@typescript-eslint/parser": "^8.31.1",
+    "@vscode/test-cli": "^0.0.10",
+    "@vscode/test-electron": "^2.5.2",
+    "eslint": "^9.25.1",
+    "openai": "^4.104.0",
+    "typescript": "^5.8.3",
+    "vscode": "^1.1.34"
+  }
+}
