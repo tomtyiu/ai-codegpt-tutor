@@ -2,12 +2,14 @@
 
 A Visual Studio Code extension that uses OpenAI's GPT-4.1 series to annotate and tutor your code with helpful suggestions and debugging tips.
 
-<img src="https://github.com/tomtyiu/ai-codegpt-tutor/blob/main/annotation.JPG" width="600">
+![Annotation Example](https://github.com/tomtyiu/ai-codegpt-tutor/blob/main/annotation.JPG)
 
 ## Features
 
 - Annotate code with suggestions for readability and maintainability
 - Choose between multiple OpenAI GPT-4.1 models (`gpt-4.1`, `gpt-4.1-mini`, `gpt-4.1-nano`)
+![Settings Example](https://github.com/tomtyiu/ai-codegpt-tutor/blob/main/settings.JPG)
+
 - Inline, friendly, and student-focused feedback
 
 ## Requirements
@@ -32,9 +34,7 @@ A Visual Studio Code extension that uses OpenAI's GPT-4.1 series to annotate and
      export OPENAI_API_KEY=your-key-here
      ```
 3. **Select your preferred model** in the extension settings (`gpt-4.1`, `gpt-4.1-mini`, or `gpt-4.1-nano`).
-
-<img src="https://github.com/tomtyiu/ai-codegpt-tutor/blob/main/settings.JPG" width="600">
-5. **Open a code file**, then click the "Toggle Tutor Annotations" button in the editor title bar or run the `Code Tutor: Toggle Tutor Annotations` command.
+4. **Open a code file**, then click the "Toggle Tutor Annotations" button in the editor title bar or run the `Code Tutor: Toggle Tutor Annotations` command.
 
 ## Development
 
